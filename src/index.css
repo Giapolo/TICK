@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* classes directes pour forcer les polices */
+.font-bangers {
+	font-family: "Bangers", cursive;
+}
+.font-dmsans {
+	font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ✅ helper pour animer une hauteur "auto" proprement (grid-rows trick) */
+.reveal-grid {
+	display: grid;
+	transition: all 300ms ease-out;
+	grid-template-rows: 0fr; /* fermé */
+}
+.reveal-grid.open {
+	grid-template-rows: 1fr; /* ouvert */
+}
