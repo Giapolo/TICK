@@ -1,16 +1,14 @@
 // src/components/Roadmap.tsx
-import roadmapImg from "../assets/tick_leaderboard.png"; // remplace si besoin
+import roadmapImg from "../assets/tick_leaderboard.png";
 
 type Phase = {
 	title: string;
-	subtitle: string;
 	items: string[];
 };
 
 const PHASES: Phase[] = [
 	{
-		title: "NOW",
-		subtitle: "(WEEK 1–2)",
+		title: "Planned",
 		items: [
 			"Automated bot posts at key moments (5 min / 1 min / 10 sec before explosion). [Twitter]",
 			"Real-time timer alerts. [Telegram]",
@@ -18,8 +16,7 @@ const PHASES: Phase[] = [
 		],
 	},
 	{
-		title: "NEXT",
-		subtitle: "(WEEK 3–4)",
+		title: "In Progress",
 		items: [
 			"Meme campaigns (“Don’t let it blow while you’re asleep!”). [Twitter]",
 			"Community betting & watch parties. [Telegram]",
@@ -29,8 +26,7 @@ const PHASES: Phase[] = [
 		],
 	},
 	{
-		title: "LATER",
-		subtitle: "(NEXT QUARTER)",
+		title: "Exploration",
 		items: [
 			"NFT “Defusers” that grant advantages (extra seconds, double rewards). [Sustainability]",
 			"Seasonal leaderboards with TICK prizes. [Sustainability]",
@@ -43,10 +39,10 @@ const PHASES: Phase[] = [
 function PhaseColumn({ phase }: { phase: Phase }) {
 	return (
 		<div className="space-y-4">
-			{/* ✅ Full-width pill = même largeur que les cartes */}
+			{/* En-tête plein largeur */}
 			<div className="w-full rounded-md bg-[#1C244B] px-4 py-2 shadow-[0_2px_10px_rgba(0,0,0,0.25)]">
 				<h3 className="font-bangers text-lg tracking-wide text-white md:text-xl">
-					{phase.title} <span className="opacity-80">{phase.subtitle}</span>
+					{phase.title}
 				</h3>
 			</div>
 
@@ -54,7 +50,7 @@ function PhaseColumn({ phase }: { phase: Phase }) {
 			<div className="space-y-3">
 				{phase.items.map((text) => (
 					<div
-						key={text} // ✅ utilise la string directement
+						key={text}
 						className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-left shadow-[0_4px_14px_rgba(0,0,0,0.25)] backdrop-blur-sm"
 					>
 						<p className="font-dmsans text-sm leading-6 text-white/90 md:text-base">
@@ -76,7 +72,7 @@ export default function Roadmap() {
 					ROADMAP
 				</h2>
 
-				{/* Desktop: 3 colonnes égales */}
+				{/* Desktop : 3 colonnes */}
 				<div className="hidden gap-8 lg:grid lg:grid-cols-3">
 					{PHASES.map((p) => (
 						<PhaseColumn key={p.title} phase={p} />
@@ -90,7 +86,7 @@ export default function Roadmap() {
 							<details key={p.title} open={idx === 0} className="group">
 								<summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3">
 									<span className="font-bangers text-lg tracking-wide text-white">
-										{p.title} <span className="opacity-80">{p.subtitle}</span>
+										{p.title}
 									</span>
 									<span className="font-dmsans text-white/70 transition group-open:rotate-180">
 										▾
@@ -99,7 +95,7 @@ export default function Roadmap() {
 								<div className="space-y-3 px-4 pb-4">
 									{p.items.map((text) => (
 										<div
-											key={text} // ✅ plus de key={i}
+											key={text}
 											className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 shadow-[0_4px_14px_rgba(0,0,0,0.25)]"
 										>
 											<p className="font-dmsans text-[15px] leading-6 text-white/90">
@@ -114,7 +110,7 @@ export default function Roadmap() {
 				</div>
 
 				{/* Illustration bas */}
-				<div className="mt-12 flex justify-center">
+				<div className="mt-12 flex flex-col items-center gap-6">
 					<img
 						src={roadmapImg}
 						alt="Roadmap mascot"

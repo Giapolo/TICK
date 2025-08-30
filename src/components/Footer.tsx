@@ -20,7 +20,7 @@ export default function Footer() {
 				{/* Socials */}
 				<div className="mt-6 flex items-center justify-center gap-8">
 					<a
-						href="https://t.me"
+						href="https://t.me/tickonsol"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Open Telegram"
@@ -29,7 +29,7 @@ export default function Footer() {
 						<SiTelegram size={28} />
 					</a>
 					<a
-						href="https://x.com"
+						href="https://x.com/TickOnSol"
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Open X"
@@ -56,18 +56,6 @@ export default function Footer() {
 						</li>
 						<li>
 							<a
-								href="/cookie"
-								className="flex w-full items-center justify-between rounded-xl border border-white/15 bg-white/5 px-4 py-3 shadow-[0_4px_14px_rgba(0,0,0,0.25)] backdrop-blur-sm"
-								aria-label="Cookie Policy"
-							>
-								<span className="font-bangers text-lg italic uppercase tracking-wide">
-									Cookie Policy
-								</span>
-								<HiChevronRight size={22} className="text-white/80" />
-							</a>
-						</li>
-						<li>
-							<a
 								href="/privacy"
 								className="flex w-full items-center justify-between rounded-xl border border-white/15 bg-white/5 px-4 py-3 shadow-[0_4px_14px_rgba(0,0,0,0.25)] backdrop-blur-sm"
 								aria-label="Privacy Policy"
@@ -81,26 +69,20 @@ export default function Footer() {
 					</ul>
 				</nav>
 
-				{/* Desktop: 3 columns aligned like the mock */}
+				{/* Desktop: 2 links centered */}
 				<nav
 					aria-label="Legal"
-					className="mt-8 hidden grid-cols-3 items-center md:grid"
+					className="mt-8 hidden items-center justify-center gap-8 md:flex"
 				>
 					<a
 						href="/terms"
-						className="font-bangers text-lg italic uppercase tracking-wide hover:opacity-90 md:justify-self-start md:text-xl"
+						className="font-bangers text-lg italic uppercase tracking-wide hover:opacity-90 md:text-xl"
 					>
 						Terms of Service
 					</a>
 					<a
-						href="/cookie"
-						className="font-bangers text-lg italic uppercase tracking-wide hover:opacity-90 md:justify-self-center md:text-xl"
-					>
-						Cookie Policy
-					</a>
-					<a
 						href="/privacy"
-						className="font-bangers text-lg italic uppercase tracking-wide hover:opacity-90 md:justify-self-end md:text-xl"
+						className="font-bangers text-lg italic uppercase tracking-wide hover:opacity-90 md:text-xl"
 					>
 						Privacy Policy
 					</a>

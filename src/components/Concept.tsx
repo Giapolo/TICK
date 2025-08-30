@@ -1,5 +1,3 @@
-import conceptImg from "../assets/tick_camping.png";
-
 export default function Concept() {
 	return (
 		<section id="about" className="relative py-16 md:py-20 lg:py-24">
@@ -10,15 +8,18 @@ export default function Concept() {
 				</h2>
 
 				<div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-12">
-					{/* Image à gauche */}
+					{/* Vidéo à gauche */}
 					<div className="relative mx-auto w-full max-w-[520px] lg:col-span-6 lg:mx-0">
-						{/* halo flou derrière l'image pour rappeler l'effet Figma */}
+						{/* halo flou derrière la vidéo */}
 						<div className="pointer-events-none absolute -inset-6 -z-10 rounded-3xl bg-white/5 blur-2xl" />
-						<img
-							src={conceptImg}
-							alt="Tick by the campfire"
+
+						<video
+							src="/tick_run.mp4"
+							autoPlay
+							loop
+							muted
+							playsInline
 							className="w-full rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
-							loading="lazy"
 						/>
 					</div>
 

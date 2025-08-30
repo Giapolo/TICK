@@ -3,13 +3,12 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { SiTelegram } from "react-icons/si";
 import logo from "../assets/logo.jpg";
+import xLogo from "../assets/X.png";
 
 const navItems: { label: string; id: string }[] = [
 	{ label: "ABOUT", id: "about" },
 	{ label: "ROADMAP", id: "roadmap" },
 	{ label: "TOKENOMICS", id: "tokenomics" },
-	{ label: "BUY TICK", id: "buy" },
-	{ label: "UPDATES", id: "updates" },
 	{ label: "WHITEPAPER", id: "whitepaper" },
 ];
 
@@ -40,10 +39,10 @@ export default function Header() {
 							className="text-white/80 transition hover:text-white"
 							aria-label="Open X"
 						>
-							<RxCross2 size={20} />
+							<img src={xLogo} alt="X logo" className="h-5 w-5" />
 						</a>
 						<a
-							href="https://t.me"
+							href="https://t.me/tickonsol"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-white/80 transition hover:text-white"
@@ -60,7 +59,7 @@ export default function Header() {
 								key={item.id}
 								type="button"
 								onClick={() => scrollToId(item.id)}
-								className="transition hover:text-white"
+								className="transition duration-300 hover:text-white hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.8)] cursor-pointer"
 								aria-label={`Go to ${item.label} section`}
 							>
 								{item.label}
@@ -71,16 +70,16 @@ export default function Header() {
 					{/* Zone droite (Desktop) */}
 					<div className="hidden lg:flex items-center gap-4">
 						<a
-							href="https://x.com"
+							href="https://x.com/TickOnSol"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="text-white/80 transition hover:text-white"
 							aria-label="Open X"
+							className="transition hover:opacity-90"
 						>
-							<RxCross2 size={20} />
+							<img src={xLogo} alt="X logo" className="h-5 w-5" />
 						</a>
 						<a
-							href="https://t.me"
+							href="https://t.me/tickonsol"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-white/80 transition hover:text-white"
@@ -91,15 +90,14 @@ export default function Header() {
 
 						<button
 							type="button"
-							onClick={() => scrollToId("buy")}
-							className="rounded-md bg-[#D88C8C] px-4 py-2 font-bangers text-sm font-normal tracking-[0.03em] text-[#1C244B] transition hover:bg-[#c67878]"
-							aria-label="Buy now"
+							disabled
+							className="rounded-md bg-gray-500/50 px-4 py-2 font-bangers text-sm font-normal tracking-[0.03em] text-gray-300 cursor-not-allowed"
 						>
 							BUY NOW
 						</button>
 
 						<span className="font-bangers text-sm font-medium italic text-white/75">
-							$TICK 0.004127
+							$TICK Coming Soon
 						</span>
 					</div>
 
@@ -117,12 +115,12 @@ export default function Header() {
 				</div>
 			</div>
 
-			{/* ✅ Mobile Menu : panneau étroit à droite, caché quand fermé */}
+			{/* ✅ Mobile Menu */}
 			<div
 				id="mobile-menu"
 				className={`absolute right-0 top-[72px] z-40 w-[150px] max-w-[70vw] 
-    border-t border-white/10 bg-[#0C0F1A] px-4 pt-2 shadow-xl lg:hidden rounded-lg
-    ${isOpen ? "block animate-slideDown" : "hidden"}`}
+					border-t border-white/10 bg-[#0C0F1A] px-4 pt-2 shadow-xl lg:hidden rounded-lg
+					${isOpen ? "block animate-slideDown" : "hidden"}`}
 			>
 				<div className="reveal-grid open">
 					<div className="overflow-hidden">
@@ -133,7 +131,7 @@ export default function Header() {
 										<button
 											type="button"
 											onClick={() => scrollToId(item.id)}
-											className="block w-full rounded-md px-2 py-2 text-right transition hover:bg-white/10 active:bg-white/15"
+											className="block w-full rounded-md px-2 py-2 text-right transition hover:text-white hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.8)] active:bg-white/15 cursor-pointer"
 											aria-label={`Go to ${item.label} section`}
 										>
 											{item.label}

@@ -53,49 +53,6 @@ export default function Mechanics() {
 					</div>
 				</div>
 			</div>
-			{/* Bandeau full-width */}
-			<div className="mt-18 w-full border-t border-white/15 bg-white/10 backdrop-blur-md">
-				<div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-3">
-					{/* Boutons groupés à gauche */}
-					<div className="flex flex-wrap gap-3 sm:gap-4">
-						<a
-							href="#buy"
-							className="rounded-md bg-[#D88C8C] px-4 py-2 text-center font-bangers text-sm uppercase tracking-wide text-[#1C244B] transition hover:bg-[#c67878]"
-						>
-							Buy $TICK
-						</a>
-						<a
-							href="https://t.me"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="rounded-md bg-[#D88C8C] px-4 py-2 text-center font-bangers text-sm uppercase tracking-wide text-[#1C244B] transition hover:bg-[#c67878]"
-						>
-							Join Telegram
-						</a>
-						<a
-							href="https://x.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="rounded-md bg-[#D88C8C] px-4 py-2 text-center font-bangers text-sm uppercase tracking-wide text-[#1C244B] transition hover:bg-[#c67878]"
-						>
-							Join X
-						</a>
-						<a
-							href="https://solscan.io"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="rounded-md bg-[#D88C8C] px-4 py-2 text-center font-bangers text-sm uppercase tracking-wide text-[#1C244B] transition hover:bg-[#c67878]"
-						>
-							Solscan
-						</a>
-					</div>
-
-					{/* Prix aligné à droite */}
-					<span className="font-dmsans text-sm font-medium italic text-white/75 whitespace-nowrap">
-						$TICK 0.004127
-					</span>
-				</div>
-			</div>
 		</section>
 	);
 }

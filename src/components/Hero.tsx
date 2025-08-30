@@ -1,7 +1,7 @@
 import { useState } from "react";
 import tickRocket from "../assets/tick_rocket.png"; // ✅ image importée
 
-const ADDR = "8xJ4Fh92kLmQpYt3nR7sDzXwP9aBcD5EfGhi1j2kLmNo";
+const ADDR = "Coming Soon";
 
 function Stat({ value, label }: { value: string; label: string }) {
 	return (
@@ -49,15 +49,18 @@ export default function Hero() {
 
 						{/* CTA Buttons */}
 						<div className="mt-6 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-							<a
-								href="#buy"
-								className="rounded-lg bg-[#D88C8C] px-6 py-3 font-bangers text-lg tracking-wide text-[#1C244B] transition hover:bg-[#c67878]"
-								aria-label="Buy $TICK"
+							<button
+								type="button"
+								disabled
+								title="Soon"
+								className="rounded-lg bg-gray-500/50 px-6 py-3 font-bangers text-lg tracking-wide text-gray-300 cursor-not-allowed"
+								aria-label="Buy $TICK (disabled)"
 							>
 								Buy $TICK
-							</a>
+							</button>
+
 							<a
-								href="https://t.me"
+								href="https://t.me/tickonsol"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="rounded-lg bg-[#D88C8C] px-6 py-3 font-bangers text-lg tracking-wide text-[#1C244B] transition hover:bg-[#c67878]"
@@ -115,7 +118,7 @@ export default function Hero() {
 
 						{/* Address + CTA — même largeur que le bandeau + wrap texte */}
 						<div className="mt-6 w-full max-w-[360px] space-y-4 text-center lg:max-w-none lg:text-left">
-							<p className="font-dmsans text-sm tracking-wide text-white/85 break-all">
+							<p className="break-all font-dmsans text-sm tracking-wide text-white/85">
 								Address : <span className="select-all">{ADDR}</span>
 							</p>
 
@@ -123,19 +126,19 @@ export default function Hero() {
 								<button
 									type="button"
 									onClick={handleCopy}
-									className="rounded-lg bg-[#E1A2A2] px-5 py-2.5 font-bangers text-base tracking-wide text-[#1C244B] transition hover:bg-[#d48f8f]"
+									className="rounded-lg bg-[#D88C8C] px-5 py-2.5 font-bangers text-base tracking-wide cursor-pointer text-[#1C244B] transition hover:bg-[#c67878]"
 								>
 									{copied ? "Copied!" : "Copy"}
 								</button>
 
-								<a
-									href="https://solscan.io"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="rounded-lg bg-[#E1A2A2] px-5 py-2.5 font-bangers text-base tracking-wide text-[#1C244B] transition hover:bg-[#d48f8f]"
+								<button
+									type="button"
+									disabled
+									title="Coming soon"
+									className="rounded-lg bg-gray-500/50 px-5 py-2.5 font-bangers text-base tracking-wide text-gray-300 cursor-not-allowed"
 								>
 									See on Solscan
-								</a>
+								</button>
 							</div>
 						</div>
 
